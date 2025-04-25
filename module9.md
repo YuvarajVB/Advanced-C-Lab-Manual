@@ -1,4 +1,4 @@
-EXP NO:11 C PROGRAM TO DISPLAY STACK ELEMENTS USING AN ARRAY.
+![image](https://github.com/user-attachments/assets/4b213a33-43fd-445d-8b40-0273ae69ca41)EXP NO:11 C PROGRAM TO DISPLAY STACK ELEMENTS USING AN ARRAY.
 
 Aim:
 To write a C program to display stack elements using an array.
@@ -12,12 +12,21 @@ Algorithm:
 7.	Use the display function to visualize the stack's contents
  
 Program:
+```
+int stack[40],top,i; void display()
+{
+for(i=top;i>=0;i--)
+{
+printf("%d\n",stack[i]);
+}
+}
 
-//type your code here
+```
 
 Output:
 
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/b6072734-4a61-4304-9b65-fe056d10b7d3)
 
 
 
@@ -36,11 +45,27 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int size=3,top=1; float stack[40];
+void push (float data)
+{
+if (top==size-1 )
+{
+printf("stack is full\n");
+}
+else
+{
+top ++; stack[top] = data;
+}
+}
+
+```
 
 Output:
 
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/fbce3c3f-9443-4756-a75e-5462c488dafa)
+
 
 
 
@@ -61,12 +86,29 @@ Algorithm:
 4.	Call the display function and perform other queue operations as needed.
  
 Program:
-
-//type your code here
+```
+int queue[50], rear, front,i; void display()
+{
+if(front==-1)
+{
+printf("No elements to display");
+}
+else
+{
+for(i=front;i<=rear;i++)
+{
+printf("%d ",queue[i]);
+}
+}
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/ff2af45f-5c20-4d8b-bc1b-74f4b9c144fe)
+
+
+
 
 
 Result:
@@ -85,12 +127,29 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
+```
+int size=4, rear=-1, front=-1; float queue[50];
+void enqueue(float data)
+{
+if(rear<size)
+{
+if(front==-1)
+{
+front=0;
+}
+rear=rear+1; queue[rear]=data;
+}
+}
 
-//type your code here
+
+```
+
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/15f14993-ddb7-4f3d-b5be-5a0bbdabe9bb)
+
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -120,12 +179,39 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 
 Program:
+```
+int front, rear;
+void dequeue()
+{
+    if(front==-1&&rear==-1)
+    printf("Queue Underflow.");
+    else if(front==rear)
+    front=rear=-1;
+    else{
+        front=front+1;
+    }
+}
 
-//type your code here
+
+```
 
 Output:
 
-//paste your output here
+
+
+![image](https://github.com/user-attachments/assets/4300e14b-700f-40b3-85cf-940cb3395b5e)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Result:
